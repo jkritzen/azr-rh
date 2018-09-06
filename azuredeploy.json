@@ -135,13 +135,10 @@
         "mode": "Incremental",
         "parameters": {
           "encryptionOperation": {
-            "value": "EnableEncryptionFormat"
+            "value": "EnableEncryption"
           },
           "volumeType": {
             "value": "All"
-          },
-          "diskFormatQuery": {
-            "value": "[variables('diskFormatQuery')]"
           },
           "aadClientID": {
             "value": "[parameters('aadClientID')]"
