@@ -5,10 +5,10 @@
 </a>
 
 
-This template creates a fully-encrypted RHEL 7.2 VM in Azure. The VM consists of:
+This nested template creates a fully-encrypted RHEL 7.2 VM in Azure. The VM consists of:
 
 - 30 GB encrypted OS drive.
-- A 1TB RAID-0 array
+- A 1TB RAID-0 array with 10x 100GB Disks including LVM Layout
 
 ## Prerequisites:
 
