@@ -148,18 +148,20 @@
               "diskSizeGB": "100",
               "lun": 1,
               "createOption": "Empty"
-            }
+            },
             {
               "name": "[variables('dataDisk3Name')]",
               "diskSizeGB": "100",
               "lun": 2,
               "createOption": "Empty"
-            }            {
+            },            
+            {
               "name": "[variables('dataDisk4Name')]",
               "diskSizeGB": "100",
               "lun": 3,
               "createOption": "Empty"
-            }            {
+            },            
+            {
               "name": "[variables('dataDisk5Name')]",
               "diskSizeGB": "100",
               "lun": 4,
@@ -169,22 +171,26 @@
               "diskSizeGB": "100",
               "lun": 5,
               "createOption": "Empty"
-            }            {
+            },            
+            {
               "name": "[variables('dataDisk7Name')]",
               "diskSizeGB": "100",
               "lun": 6,
               "createOption": "Empty"
-            }            {
+            },            
+            {
               "name": "[variables('dataDisk8Name')]",
               "diskSizeGB": "100",
               "lun": 7,
               "createOption": "Empty"
-            }            {
+            },           
+            {
               "name": "[variables('dataDisk9Name')]",
               "diskSizeGB": "100",
               "lun": 8,
               "createOption": "Empty"
-            }            {
+            },            
+            {
               "name": "[variables('dataDisk10Name')]",
               "diskSizeGB": "100",
               "lun": 9,
