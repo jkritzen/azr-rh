@@ -1,18 +1,8 @@
-# Deployment of Red Hat Enterprise Linux VM (RHEL 7.2 or RHEL 6.7)
+# Deployment of Red Hat Enterprise Linux VM (RHEL 7.2)
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjkritzen%2Fazr-rh%2Fmaster%2F01-create-vm%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
 
-This template allows deploying a Red Hat Enterprise Linux VM (RHEL 7.2 or RHEL 6.7), using the latest image for the selected RHEL version. This will deploy a Standard D1 VM in the location of your chosen resource group with an additional 100 GiB data disk attached to the VM.
-
-Independently form this template you can deploy a blank RHEL VM using the following Azure CLI commands (adjust parameters as needed):
-
-```
-azure config mode arm
-azure group create TestCLIRG EastUS
-azure vm quick-create TestCLIRG vm1 EastUS Linux RedHat:RHEL:7.2:latest azureuser
-```
-
-Note: this template and the above commands use RHEL Pay-As-You-Go VM image which carries an additional charge in addition to the base Linux VM price. Check out [RHEL VM pricing](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/#red-hat) for more details.  
+This template allows deploying a Red Hat Enterprise Linux VM (RHEL 7.2 or RHEL 6.7), using the latest image for the selected RHEL version. This will deploy a Standard D3v2 VM in the location of your chosen resource group with additional ten (10x) 100 GiB data disk attached to the VM.
