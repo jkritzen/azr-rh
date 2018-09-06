@@ -29,8 +29,16 @@
     }
   },
   "variables": {
-    "dataDisk1Name": "[concat(uniquestring(parameters('vmName')), 'datadisk1')]",
-    "dataDisk2Name": "[concat(uniquestring(parameters('vmName')), 'datadisk2')]",
+    "dataDisk1Name": "[concat(uniquestring(parameters('vmName')), 'datadisk01')]",
+    "dataDisk2Name": "[concat(uniquestring(parameters('vmName')), 'datadisk02')]",
+    "dataDisk3Name": "[concat(uniquestring(parameters('vmName')), 'datadisk03')]",
+    "dataDisk4Name": "[concat(uniquestring(parameters('vmName')), 'datadisk04')]",
+    "dataDisk5Name": "[concat(uniquestring(parameters('vmName')), 'datadisk05')]",
+    "dataDisk6Name": "[concat(uniquestring(parameters('vmName')), 'datadisk06')]",
+    "dataDisk7Name": "[concat(uniquestring(parameters('vmName')), 'datadisk07')]",
+    "dataDisk8Name": "[concat(uniquestring(parameters('vmName')), 'datadisk08')]",
+    "dataDisk9Name": "[concat(uniquestring(parameters('vmName')), 'datadisk09')]",
+    "dataDisk10Name": "[concat(uniquestring(parameters('vmName')), 'datadisk10')]",
     "imagePublisher": "RedHat",
     "imageOffer": "RHEL",
     "imageSku": "7.2",
@@ -141,6 +149,47 @@
               "lun": 1,
               "createOption": "Empty"
             }
+            {
+              "name": "[variables('dataDisk3Name')]",
+              "diskSizeGB": "100",
+              "lun": 2,
+              "createOption": "Empty"
+            }            {
+              "name": "[variables('dataDisk4Name')]",
+              "diskSizeGB": "100",
+              "lun": 3,
+              "createOption": "Empty"
+            }            {
+              "name": "[variables('dataDisk5Name')]",
+              "diskSizeGB": "100",
+              "lun": 4,
+              "createOption": "Empty"
+            }            {
+              "name": "[variables('dataDisk6Name')]",
+              "diskSizeGB": "100",
+              "lun": 5,
+              "createOption": "Empty"
+            }            {
+              "name": "[variables('dataDisk7Name')]",
+              "diskSizeGB": "100",
+              "lun": 6,
+              "createOption": "Empty"
+            }            {
+              "name": "[variables('dataDisk8Name')]",
+              "diskSizeGB": "100",
+              "lun": 7,
+              "createOption": "Empty"
+            }            {
+              "name": "[variables('dataDisk9Name')]",
+              "diskSizeGB": "100",
+              "lun": 8,
+              "createOption": "Empty"
+            }            {
+              "name": "[variables('dataDisk10Name')]",
+              "diskSizeGB": "100",
+              "lun": 9,
+              "createOption": "Empty"
+            }           
           ]
         },
         "networkProfile": {
