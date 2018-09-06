@@ -1,6 +1,6 @@
 # Deployment of Red Hat Enterprise Linux VM (RHEL 7.2 or RHEL 6.7)
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/jkritzen/azr-rh/master/01-create-vm/azuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjkritzen%2Fazr-rh%2Fmaster%2F01-create-vm%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
