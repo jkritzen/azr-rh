@@ -29,8 +29,9 @@
     }
   },
   "variables": {
-    "dataDisk1Name": "[concat(uniquestring(parameters('vmName')), 'datadisk1')]",
-    "dataDisk2Name": "[concat(uniquestring(parameters('vmName')), 'datadisk2')]",
+    "dataDisk1Name": "[concat(uniquestring(parameters('vmName')), 'datadisk01')]",
+    "dataDisk2Name": "[concat(uniquestring(parameters('vmName')), 'datadisk02')]",
+    "dataDisk3Name": "[concat(uniquestring(parameters('vmName')), 'datadisk03')]",
     "imagePublisher": "RedHat",
     "imageOffer": "RHEL",
     "imageSku": "7.2",
@@ -139,6 +140,12 @@
               "name": "[variables('dataDisk2Name')]",
               "diskSizeGB": "100",
               "lun": 1,
+              "createOption": "Empty"
+            },
+            {
+              "name": "[variables('dataDisk3Name')]",
+              "diskSizeGB": "100",
+              "lun": 2,
               "createOption": "Empty"
             }
           ]
