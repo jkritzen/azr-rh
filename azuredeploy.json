@@ -46,7 +46,7 @@
     },
     "_artifactsLocation": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/jkritzen/azr-rh/master/",
+      "defaultValue": "https://raw.githubusercontent.com/jkritzen/azr-rh/master",
       "metadata": {
         "description": "The base URI where artifacts required by this template are located. When the template is deployed using the accompanying scripts, a private location in the subscription will be used and this value will be automatically generated."
       }
@@ -70,7 +70,7 @@
     "templateName": "azr-rh",
     "createVmUrl": "[concat(parameters('_artifactsLocation'), '/', '01-create-vm', '/', 'azuredeploy.json', parameters('_artifactsLocationSasToken'))]",
     "createVmDeploymentName": "[concat(uniquestring(parameters('vmName')), 'createVm')]",
-    "encryptVmUrl": "[concat(parameters('_artifactsLocation'), '/', '201-encrypt-running-linux-vm', '/', 'azuredeploy.json', parameters('_artifactsLocationSasToken'))]",
+    "encryptVmUrl": "[concat(parameters('_artifactsLocation'), '/', '03-encrypt-vm', '/', 'azuredeploy.json', parameters('_artifactsLocationSasToken'))]",
     "encryptVmDeploymentName": "[concat(uniquestring(parameters('vmName')), 'encryptVm')]",
     "scriptsFolder": "02-setup-raid",
     "scriptFileName": "setup_raid.sh",
