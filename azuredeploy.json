@@ -46,7 +46,7 @@
     },
     "_artifactsLocation": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master",
+      "defaultValue": "https://raw.githubusercontent.com/jkritzen/azr-rh/master/",
       "metadata": {
         "description": "The base URI where artifacts required by this template are located. When the template is deployed using the accompanying scripts, a private location in the subscription will be used and this value will be automatically generated."
       }
@@ -67,16 +67,16 @@
     }
   },
   "variables": {
-    "templateName": "101-vm-full-disk-encrypted-rhel",
-    "createVmUrl": "[concat(parameters('_artifactsLocation'), '/', '101-vm-simple-rhel', '/', 'azuredeploy.json', parameters('_artifactsLocationSasToken'))]",
+    "templateName": "azr-rh",
+    "createVmUrl": "[concat(parameters('_artifactsLocation'), '/', '01-create-vm', '/', 'azuredeploy.json', parameters('_artifactsLocationSasToken'))]",
     "createVmDeploymentName": "[concat(uniquestring(parameters('vmName')), 'createVm')]",
     "encryptVmUrl": "[concat(parameters('_artifactsLocation'), '/', '201-encrypt-running-linux-vm', '/', 'azuredeploy.json', parameters('_artifactsLocationSasToken'))]",
     "encryptVmDeploymentName": "[concat(uniquestring(parameters('vmName')), 'encryptVm')]",
-    "scriptsFolder": "scripts",
+    "scriptsFolder": "02-setup-raid",
     "scriptFileName": "setup_raid.sh",
     "setupRaidUrl": "[concat(parameters('_artifactsLocation'), '/', variables('templateName'), '/', variables('scriptsFolder'), '/', variables('scriptFileName'), parameters('_artifactsLocationSasToken'))]",
     "setupRaidExtensionName": "setupRaidCustomScript",
-    "diskFormatQuery": "{\"dev_path\":\"/dev/md0\",\"name\":\"encryptedraid\",\"file_system\":\"ext4\"}"
+    "diskFormatQuery": "{\"dev_path\":\"/dev/md0\",\"name\":\"encryptedraid\",\"file_system\":\"xfs\"}"
   },
   "resources": [
     {
