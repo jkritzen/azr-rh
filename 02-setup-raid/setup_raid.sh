@@ -10,6 +10,6 @@ for DISK in $DATADISKS; do
 done
 
 yum install -y mdadm
-mdadm --create --verbose /dev/md0 --level=0 --raid-devices=2 $DATADISKSFULLNAMES
+mdadm --create --verbose /dev/md0 --level=0 --raid-devices=10 $DATADISKSFULLNAMES
 mkdir -p /etc/mdadm
 mdadm --detail --scan > /etc/mdadm/mdadm.conf
