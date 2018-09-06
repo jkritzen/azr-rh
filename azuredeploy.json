@@ -74,7 +74,7 @@
     "encryptVmDeploymentName": "[concat(uniquestring(parameters('vmName')), 'encryptVm')]",
     "scriptsFolder": "02-setup-raid",
     "scriptFileName": "setup_raid.sh",
-    "setupRaidUrl": "[concat(parameters('_artifactsLocation'), '/', variables('templateName'), '/', variables('scriptsFolder'), '/', variables('scriptFileName'), parameters('_artifactsLocationSasToken'))]",
+    "setupRaidUrl": "[concat(parameters('_artifactsLocation'), '/', variables('scriptsFolder'), '/', variables('scriptFileName'), parameters('_artifactsLocationSasToken'))]",
     "setupRaidExtensionName": "setupRaidCustomScript",
     "diskFormatQuery": "{\"dev_path\":\"/dev/md0\",\"name\":\"encryptedraid\",\"file_system\":\"xfs\"}"
   },
