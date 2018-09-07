@@ -3,7 +3,7 @@
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2raw.githubusercontent.com%2Fjkritzen%2Fazr-rh%2Fmaster%2F03-encrypt-vm%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
-
+https://raw.githubusercontent.com/jkritzen/azr-rh/master/03-encrypt-vm/azuredeploy.json
 
 This template enables encryption on a running linux vm using AAD client secret. This template assumes that the VM is located in the same region as the resource group. If not, please edit the template to pass appropriate location for the VM sub-resources.
 
