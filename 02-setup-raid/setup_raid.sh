@@ -22,7 +22,7 @@ lvcreate -L 42G -n usrsap sapvg
 lvcreate -L 100G -n sirax sapvg
 lvcreate -L 105G -n hanalog sapvg
 lvcreate -L 311G -n hanashared sapvg
-lvcreate -L 100G -n hanadata sapvg
+lvcreate -L 481G -n hanadata sapvg
 lvcreate -L 164G -n sapinst sapvg
 #Create file system (format)
 mkfs.xfs /dev/sapvg/sapmnt
