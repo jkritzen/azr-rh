@@ -19,8 +19,6 @@ The [AzureDiskEncryptionPreRequisiteSetup.ps1](https://github.com/Azure/azure-po
 ## Monitoring progress
 
 It will take roughly one hour per 100GB to encrypt the OS drive and RAID drive each . You can monitor the encryption progress by calling Azure CLI cmdlet as shown below:
-
-
     
     az vm encryption show --name $VMName --resource-group $resourceGroup -o tsv
     Start: Fr 7. Sep 14:47:37 CEST 2018
@@ -28,9 +26,12 @@ It will take roughly one hour per 100GB to encrypt the OS drive and RAID drive e
     
     Fr 7. Sep 15:11:48 CEST 2018
     EncryptionInProgress	EncryptionInProgress		Linux	Encrypting data volume 4/7: 0%
-    
-    
-    
+    Fr 7. Sep 18:36:32 CEST 2018    
+    EncryptionInProgress	EncryptionInProgress		Linux	https://KVName.vault.azure.net/
+    Fr 7. Sep 18:38:31 CEST 2018
+    EncryptionInProgress	EncryptionInProgress		Linux	OS disk encryption started
+    Fr 7. Sep 19:04:57 CEST 2018
+    Encrypted	VMRestartPending		Linux	OS disk successfully encrypted, please reboot the VM
     
 
 Once the cmdlet shows the message `VMRestartPending`reboot the VM.
