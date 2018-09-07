@@ -18,26 +18,16 @@ The [AzureDiskEncryptionPreRequisiteSetup.ps1](https://github.com/Azure/azure-po
 
 ## Monitoring progress
 
-It will take roughly one hour to encrypt the OS drive. You can monitor the encryption progress by calling `Get-AzureRmVmDiskEncryptionStatus` PowerShell cmdlet as shown below.
+It will take roughly one hour to encrypt the OS drive. You can monitor the encryption progress by calling Azure CLI cmdlet as shown below:
 
-    C:\> Get-AzureRmVmDiskEncryptionStatus -ResourceGroupName $ResourceGroupName -VMName $VMName
-    -ExtensionName $ExtensionName
+az vm encryption show --name $VMName --resource-group $ResourceGroup -o table
 
-    OsVolumeEncrypted          : EncryptionInProgress
-    DataVolumesEncrypted       : EncryptionInProgress
-    OsVolumeEncryptionSettings : Microsoft.Azure.Management.Compute.Models.DiskEncryptionSettings
-    ProgressMessage            : OS disk encryption started
+DataDisk              OsDisk                OsType    ProgressMessage
+--------------------  --------------------  --------  -------------------------------
+EncryptionInProgress  EncryptionInProgress  Linux     Encrypting data volume 3/7: 10%
 
-Once the cmdlet shows the message `VMRestartPending`, like the one show below, reboot the VM.
 
-    C:\> Get-AzureRmVmDiskEncryptionStatus -ResourceGroupName $ResourceGroupName -VMName $VMName
-    -ExtensionName $ExtensionName
-    
-    OsVolumeEncrypted          : VMRestartPending
-    DataVolumesEncrypted       : Encrypted
-    OsVolumeEncryptionSettings : Microsoft.Azure.Management.Compute.Models.DiskEncryptionSettings
-    ProgressMessage            : OS disk successfully encrypted, please reboot the VM
-
+Once the cmdlet shows the message `VMRestartPending`reboot the VM.
 
 `/` will be mounted mounted from a AES-256 bit encrypted drive:
 
