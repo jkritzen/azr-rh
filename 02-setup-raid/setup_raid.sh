@@ -57,13 +57,14 @@ mount /dev/sapvg/hanashared /hana/shared
 mount /dev/sapvg/hanadata /hana/data
 mount /dev/sapvg/sapinst /mnt/sapinst
 # Adding FSTAB Entrys
-echo "/dev/sapvg/sapmnt	    /sapmnt             xfs     defaults,nofail 0 0" 	>> /etc/fstab
-echo "/dev/sapvg/usrsap	    /usr/sap            xfs     defaults,nofail 0 0" 	>> /etc/fstab
-echo "/dev/sapvg/sirax	    /SIRAX              xfs     defaults,nofail 0 0" 	>> /etc/fstab
-echo "/dev/sapvg/hanalog    /hana/log           xfs     defaults,nofail 0 0" 	>> /etc/fstab
-echo "/dev/sapvg/hanashared /hana/shared        xfs     defaults,nofail 0 0" 	>> /etc/fstab
-echo "/dev/sapvg/hanadata   /hana/data          xfs     defaults,nofail 0 0" 	>> /etc/fstab
-echo "/dev/sapvg/sapinst    /mnt/sapinst        xfs     defaults,nofail 0 0" 	>> /etc/fstab
+echo "# SAP RAID" >> /etc/fstab
+echo "/dev/sapvg/sapmnt	    	/sapmnt             xfs     defaults,nofail 0 0" 	>> /etc/fstab
+echo "/dev/sapvg/usrsap	    	/usr/sap            xfs     defaults,nofail 0 0" 	>> /etc/fstab
+echo "/dev/sapvg/sirax	    	/SIRAX              xfs     defaults,nofail 0 0" 	>> /etc/fstab
+echo "/dev/sapvg/hanalog    	/hana/log           xfs     defaults,nofail 0 0" 	>> /etc/fstab
+echo "/dev/sapvg/hanashared 	/hana/shared        xfs     defaults,nofail 0 0" 	>> /etc/fstab
+echo "/dev/sapvg/hanadata   	/hana/data          xfs     defaults,nofail 0 0" 	>> /etc/fstab
+echo "/dev/sapvg/sapinst    	/mnt/sapinst        xfs     defaults,nofail 0 0" 	>> /etc/fstab
 
 
 
