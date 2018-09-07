@@ -2,7 +2,7 @@
 
 set -e
 
-DATADISKS=$(lsblk | grep 100G | cut -d' ' -f1 | tr '\n' ' ')
+DATADISKS=$(lsblk | grep 128G | cut -d' ' -f1 | tr '\n' ' ')
 DATADISKSFULLNAMES=""
 
 for DISK in $DATADISKS; do
